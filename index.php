@@ -111,11 +111,5 @@ suma_multiplu($sir_maxim,5);
 echo "dffdggf";
 echo 'ffsdfd0';
 echo 'adaugare';
-<<<<<<< HEAD
-echo "inca un exemplu";
-
-=======
-echo "dddd";
->>>>>>> 3b03f0adb6038cb1b2f57322e73722b8dc7dbb43
 
 
