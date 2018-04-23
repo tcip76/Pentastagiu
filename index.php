@@ -111,6 +111,7 @@ suma_multiplu($sir_maxim,5);
 echo "dffdggf";
 echo 'ffsdfd0';
 echo 'adaugare';
+echo "inca un exemplu";
 
 
 
