@@ -111,5 +111,9 @@ suma_multiplu($sir_maxim,5);
 echo "dffdggf";
 echo 'ffsdfd0';
 echo 'adaugare';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 164863382cd4dbe499c41dd69908409e798094bd
 
 
