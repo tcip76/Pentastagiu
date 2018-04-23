@@ -108,6 +108,7 @@ echo "Numarul de numere  multiplu de 4: <br/>";
 numar_multiplu($sir_maxim,4);
 echo "Suma numerelor multiplu de 5: <br/>";
 suma_multiplu($sir_maxim,5);
+echo "dffdggf";
 
 
 
