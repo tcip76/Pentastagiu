@@ -53,19 +53,34 @@
 if (!$_POST) {
     exit;
 }
-class Exceptii
 $primul=$_POST['startPoint'];
 $ultimul=$_POST['endPoint'];
 $elemente=$_POST['iterations'];
-if($primul<0||empty($ultimul)||empty($elemente)){
-    echo "Trebuie sa introduceti numerele";
-    exit;
 
+class Exceptii extends Exception {
+  public  function tratare_exceptii(){
+        echo "Trebuie sa introduceti numerele";
+    }
+    public  function tratare_exceptii2(){
+        echo "Introduceti numere pozitive";
+    }
+}
+try{
+if($primul<0||empty($ultimul)||empty($elemente)) {
+    throw new Exceptii();
+    exit;
 
 }
-if (!empty($elemente)&&($elemente<1)){
-    echo "Introduceti numere pozitive";
-    exit;
+}catch (Exceptii $e){
+    $e->tratare_exceptii();
+}
+try {
+    if (!empty($elemente) && ($elemente < 1)) {
+        throw new Exceptii();
+        exit;
+    }
+}catch (Exceptii $exceptii){
+    $exceptii->tratare_exceptii2();
 }
 class Exemplu
 {
