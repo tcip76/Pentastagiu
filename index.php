@@ -66,35 +66,42 @@ if (!empty($elemente)&&($elemente<1)){
     echo "Introduceti numere pozitive";
     exit;
 }
-
-function afisare_multiplu($sirul,$numar){
-        foreach ($sirul as $value){
-            if($value%$numar==0){
+class Exemplu
+{
+   public function afisare_multiplu($sirul, $numar)
+    {
+        foreach ($sirul as $value) {
+            if ($value % $numar == 0) {
                 var_dump($value);
             }
         }
-   }
-function numar_multiplu($sirul,$numar){
-    $count=0;
-    foreach ($sirul as $value){
-        if($value%$numar==0){
-            $count++;
+    }
+
+   public function numar_multiplu($sirul, $numar)
+    {
+        $count = 0;
+        foreach ($sirul as $value) {
+            if ($value % $numar == 0) {
+                $count++;
+            }
+
         }
+        echo $count . "<br/>";
+    }
 
-    }echo $count."<br/>";
-}
+   public function suma_multiplu($sirul, $numar)
+    {
+        $sum = 0;
+        foreach ($sirul as $value) {
+            if ($value % $numar == 0) {
+                $sum = $sum + $value;
+            }
 
-function suma_multiplu($sirul,$numar){
-    $sum=0;
-    foreach ($sirul as $value){
-        if($value%$numar==0){
-            $sum=$sum+$value;
         }
+        echo $sum . "<br/>";
+    }
 
-    }echo $sum."<br/>";
 }
-
-
 echo "<pre>";
 print_r($_POST);
 
@@ -102,14 +109,10 @@ $sir=range($primul+1,$ultimul-1);
 $sir_maxim=array_slice($sir,0,$elemente);
 echo "<pre>";
 var_dump($sir_maxim);
-echo "Numerele multiplu de 3: <br/>";
-afisare_multiplu($sir_maxim,3);
-echo "Numarul de numere  multiplu de 4: <br/>";
-numar_multiplu($sir_maxim,4);
-echo "Suma numerelor multiplu de 5: <br/>";
-suma_multiplu($sir_maxim,5);
-echo "dffdggf";
-echo 'ffsdfd0';
-echo 'adaugare';
-echo "mesaj";
+
+$var=new Exemplu();
+$var->afisare_multiplu($sir_maxim,3);
+$var->numar_multiplu($sir_maxim,4);
+$var->suma_multiplu($sir_maxim,5);
+
 
