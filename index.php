@@ -53,6 +53,7 @@
 if (!$_POST) {
     exit;
 }
+class Exceptii
 $primul=$_POST['startPoint'];
 $ultimul=$_POST['endPoint'];
 $elemente=$_POST['iterations'];
